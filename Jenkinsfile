@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-pipeline {
+pipeline{
   agent {label 'your-docker-agent-name-here'}
   environment {
     VIRTUALENV                  = 'snowflake_dev'                           // name of virtual environment

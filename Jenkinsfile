@@ -13,7 +13,7 @@ pipeline {
     SF_DB                       = credentials('SF_DB')
     SF_CH                       = credentials('SF_CH')
     SECRET_LOCATION             = '/home/awie'              // If you are using a Key Pair Authentication
-    JENKINS_CRED_ID_SECRET_FILE = 'rsa_key.p8'      // If you are using a Key Pair Authentication
+    JENKINS_CRED_ID_SECRET_FILE = 'rsa_key.pub'      // If you are using a Key Pair Authentication
     JENKINS_CRED_ID_SECRET      = 'matofu30'  // If you are using a Key Pair Authentication
     SCHEMACHANGE                = "${WORKSPACE}/${VIRTUALENV}/lib/${PYTHON_VERSION}/site-packages/schemachange/cli.py"
   }

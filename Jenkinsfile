@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-pipeline{
+pipeline {
   agent {label 'your-docker-agent-name-here'}
   environment {
     VIRTUALENV                  = 'snowflake_dev'                           // name of virtual environment
@@ -17,7 +17,7 @@ pipeline{
     JENKINS_CRED_ID_SECRET      = 'matofu30'  // If you are using a Key Pair Authentication
     SCHEMACHANGE                = "${WORKSPACE}/${VIRTUALENV}/lib/${PYTHON_VERSION}/site-packages/schemachange/cli.py"
   }
-  stages {
+  stages{
     stage('Deploying Changes To Sandbox Snowflake') {
       steps {
         withCredentials([file(credentialsId: "${JENKINS_CRED_ID_SECRET_FILE}", variable: 'SNOWFLAKE_PRIVATE_KEY_FILE'),

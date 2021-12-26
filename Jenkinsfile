@@ -25,8 +25,7 @@ pipeline {
                   echo 'Step 2: Running schemachange' 
                   ${PYTHON_VERSION} ${SCHEMACHANGE} -f ${PROJECT_FOLDER} -a ${SF_ACCOUNT} -u ${SF_USER} -r ${SF_ROLE} -w ${SF_WH} -d ${SF_DB} -c ${SF_CH} -v
            """
-        }
-      }
-    }
-  }
+       }
+     }
+   }
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 pipeline {
-  agent {label 'your-docker-agent-name-here'}
+  agent any
   environment {
     VIRTUALENV                  = 'snowflake_dev'                           // name of virtual environment
     PYTHON_VERSION              = 'python3.7'                               // can be python3.8, python3.9

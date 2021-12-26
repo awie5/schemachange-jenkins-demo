@@ -12,9 +12,9 @@ pipeline {
     SF_WH                       = credentials('SF_WH')
     SF_DB                       = credentials('SF_DB')
     SF_CH                       = credentials('SF_CH')
-    SECRET_LOCATION             = '/home/jenkins/snowflake_pk'              // If you are using a Key Pair Authentication
-    JENKINS_CRED_ID_SECRET_FILE = 'YOUR SECRET FILE JENKINS NAME HERE'      // If you are using a Key Pair Authentication
-    JENKINS_CRED_ID_SECRET      = 'YOUR SECRET PASSWORD JENKINS NAME HERE'  // If you are using a Key Pair Authentication
+    SECRET_LOCATION             = '/home/awie'              // If you are using a Key Pair Authentication
+    JENKINS_CRED_ID_SECRET_FILE = 'rsa_key.p8'      // If you are using a Key Pair Authentication
+    JENKINS_CRED_ID_SECRET      = 'matofu30'  // If you are using a Key Pair Authentication
     SCHEMACHANGE                = "${WORKSPACE}/${VIRTUALENV}/lib/${PYTHON_VERSION}/site-packages/schemachange/cli.py"
   }
   stages {
